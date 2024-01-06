@@ -1,0 +1,10 @@
+.follower{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    .follow-btn{
+        color : var(--accent-color);
+    }
+}

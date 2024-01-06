@@ -1,0 +1,43 @@
+.login-box{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2rem 1.5rem;
+
+    .login-heading{
+        text-align: center;
+        font-size: 2rem ;
+        margin-bottom: 10px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+         
+    }
+    input{  margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: rgb(62, 62, 62);
+        padding: 5px 10px;
+
+        border-radius: 5px;
+    }
+    label{
+        font-size: 1.2rem;
+    }
+    .submit {
+        margin-top: 15px;
+        background-color: rgb(244, 68, 106);
+        font-weight: bold;
+        color:  black;
+    }
+    p{
+        margin-top: -10px;
+    
+    }
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}

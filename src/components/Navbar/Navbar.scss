@@ -1,0 +1,20 @@
+.nav-container{
+    width: 70%;
+    margin-inline:auto;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 10px;
+    align-items: center;
+    
+}
+
+.nav-bar{
+    border-bottom: 2px solid rgb(249, 36, 36);
+}
+.right-part{
+    display: flex;
+    gap: 20px;
+}
+.logout-icon{
+    font-size: 2rem;
+}

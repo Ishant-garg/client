@@ -1,0 +1,24 @@
+.feed {
+    .container {
+        display: flex;
+    }
+
+    .left-side {
+        flex: 2;
+        margin-top: 10px;
+        overflow-y: auto; /* Enable vertical scrolling */
+        max-height: calc(100vh - 74px); /* Set a fixed height for the left side */
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+    }
+
+    .right-side {
+        margin-left: 10px;
+        flex: 1;
+    }
+}
