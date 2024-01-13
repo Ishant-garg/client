@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import './Signup.scss';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import axiosClient from '../../utils/axiosClient';
 
 const Signup = () => {
+  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+ 
+  const [signupSuccess, setSignupSuccess] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -16,14 +19,19 @@ const Signup = () => {
         email,
         password,
       });
+      setSignupSuccess(true);
 
       console.log('Signup result:', result);
     } catch (error) {
       console.log('Signup error:', error);
     }
   }
+  if (signupSuccess) {
+    return <Navigate to="/login" state={{ signupSuccess: true }} />;
+  }
 
-  return (
+// isAuthor ?  <Navigate to='/'/> : 
+   return  (
     <>
       <div className="signup">
         <div className="signup-box">

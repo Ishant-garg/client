@@ -18,8 +18,16 @@
     }
 
     .right-side {
+        margin-top: 10px;
         border: 2px solid var(--border-color);
         height: fit-content;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.75);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+    
+        border-radius: 10px;
         padding: 40px;
         margin-left: 10px;
         flex: 1;
@@ -32,6 +40,7 @@
             width: 80px;
             height: 80px;
             margin-bottom: 10px;
+            border-radius: 50%;
            }
            .follow-status{
             display: flex;
@@ -54,8 +63,30 @@
            }
 
            .follow-btn{
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 8px 13px;
+            margin-bottom: 15px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+          
             background-color: var(--accent-color);
             color: white;
+           
+           }
+           .unfollow-btn{
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 8px 13px;
+            margin-bottom: 15px;
+            border: none;
+            outline: none;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+          
+            background-color: white;
+            color:  var(--accent-color);
            
            }
 
@@ -66,4 +97,21 @@
            }
         }
     }
+}
+// .follow-btn{
+//     cursor: pointer;
+//     color: white;
+//     font-size: 0.9rem;
+//     padding: 3px 7px;
+//     margin-bottom: 15px;
+//     border: none;
+//     outline: none;
+//     border-radius: 5px;
+//       border: 2px solid var(--accent-color);
+//       background-color: var(--accent-color);
+    
+// }
+
+.bio{
+    margin-top: 5px;
 }

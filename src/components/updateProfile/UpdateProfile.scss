@@ -4,10 +4,16 @@
     .left-side{
         flex : 1;
         img{
-            width: 80px;
-            height: 80px;
+            width: 150px;
+            height: 150px;
             margin-left: 70px;
-
+            border: 2px solid rgb(0, 0, 0);
+            border-style:dashed ;
+            border-radius: 50%;
+            cursor: pointer;
+        }  
+        input{
+            display: none;
         }
     }
 
