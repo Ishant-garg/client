@@ -1,9 +1,27 @@
+.login {
+    background: url('data:image/svg+xml;utf8,%3Csvg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"%3E%3Cdefs%3E%3ClinearGradient id="gradient" x1="5%" y1="28%" x2="95%" y2="72%"%3E%3Cstop offset="5%" stop-color="%23685dff"%3E%3C/stop%3E%3Cstop offset="95%" stop-color="%238ED1FC"%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d="M 0,600 L 0,300 C 95.44497607655506,339.5980861244019 190.88995215311013,379.19617224880386 276,349 C 361.11004784688987,318.80382775119614 435.8851674641147,218.81339712918665 529,188 C 622.1148325358853,157.18660287081335 733.5693779904307,195.55023923444975 835,200 C 936.4306220095693,204.44976076555025 1027.8373205741625,174.98564593301438 1127,136 C 1226.1626794258375,97.01435406698563 1333.0813397129186,48.507177033492816 1440,0 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="url(%23gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"%3E%3C/path%3E%3Cdefs%3E%3ClinearGradient id="gradient" x1="5%" y1="28%" x2="95%" y2="72%"%3E%3Cstop offset="5%" stop-color="%23685dff"%3E%3C/stop%3E%3Cstop offset="95%" stop-color="%238ED1FC"%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d="M 0,600 L 0,500 C 113.01435406698565,492.12440191387554 226.0287081339713,484.24880382775115 310,487 C 393.9712918660287,489.75119617224885 448.8995215311004,503.12918660287085 548,483 C 647.1004784688996,462.87081339712915 790.3732057416267,409.2344497607656 891,368 C 991.6267942583733,326.7655502392344 1049.6076555023924,297.933014354067 1134,272 C 1218.3923444976076,246.06698564593302 1329.1961722488038,223.0334928229665 1440,200 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="url(%23gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"%3E%3C/path%3E%3C/svg%3E') center/cover;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+ 
+
 .login-box{
+    margin-top: 7%;
     border: 2px solid black;
     border-radius: 10px;
     width: fit-content;
+    height: fit-content;
     padding: 2rem 1.5rem;
-
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     .login-heading{
         text-align: center;
         font-size: 2rem ;
@@ -18,7 +36,7 @@
         font-size: 1.1rem;
         color: rgb(62, 62, 62);
         padding: 5px 10px;
-
+        background-color: transparent;
         border-radius: 5px;
     }
     label{
@@ -26,9 +44,9 @@
     }
     .submit {
         margin-top: 15px;
-        background-color: rgb(244, 68, 106);
+        background-color: var(--accent-color);
         font-weight: bold;
-        color:  black;
+        color:  white;
     }
     p{
         margin-top: -10px;
@@ -36,8 +54,30 @@
     }
 }
 
-.login{
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
+ 
+
+.pass-field{
+   display: flex;
+   align-items: center;
+    border: 2px solid rgb(62, 62, 62);
+    border-radius:  5px;
+    input{
+        border: none;
+        margin: 0px;
+        outline: none;
+    }
+    .toogle-icon{
+        .ticon{
+            margin-right: 5px;
+
+            font-size: 1.29rem;
+        }
+    }
+
+}
+
+.signup-line{
+    margin-top: 16px;
+    color: var(--accent-color);
+    text-align: center;
 }

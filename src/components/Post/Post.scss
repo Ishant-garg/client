@@ -1,10 +1,13 @@
 .post{
     margin-block: 10px;
     border: 2px solid var(--border-color);
+    border-radius: 6px;
     .heading{
         display: flex;
-        justify-content: space-between;
-        padding: 10px 15px;
+        align-items: center;
+        gap: 1rem;
+         padding: 10px 15px;
+         cursor: pointer;
     }
     .content{
         height: 400px;
@@ -13,22 +16,23 @@
              width: 100%;
              height: 100%;
              object-fit: cover;
+             border-radius: 6px;
         }
     }
     .footer{
          
-        padding: 20px;
+        padding: 13px;
         .like-section{
             display: flex;
 
-            gap: 10px;
+            gap: 6px;
             align-items: center;
              .icon{
                 font-size: 1.2rem;
              }
         }
         .caption{
-            margin-top: 15px;
+            margin-block: 15px;
         }
     }
 }

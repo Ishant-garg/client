@@ -9,7 +9,8 @@
 }
 
 .nav-bar{
-    border-bottom: 2px solid rgb(249, 36, 36);
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow:  2px 2px 100px rgb(219, 217, 245);
 }
 .right-part{
     display: flex;
