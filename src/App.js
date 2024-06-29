@@ -13,7 +13,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import RequiredUser from "./components/RequiredUser";
 
 import OnlyIfNotLoggedIn from "./components/OnlyIfNotLoggedIn";
-import { showToast } from "./redux/slices/appConfigSlice";
+ 
 
 export const TOAST_SUCCESS = 'toast_success'
 export const TOAST_FAILURE = 'toast_failure'
