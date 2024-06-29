@@ -8,11 +8,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setLoading, showToast } from '../../redux/slices/appConfigSlice';
 import { getUserProfile } from '../../redux/slices/postsSlice';
 import { TOAST_SUCCESS } from '../../App';
+import axios from 'axios';
 const CreatePost = () => {
     const myProfile = useSelector(store => store.appConfigReducer.myProfile)
 
     const[img , setImg] = useState('');
     const[caption , setCaption] = useState('');
+    const[loadingImg , setLoadingImg] = useState(false);
+    const[description , setDescription] = useState('');
     const dispatch = useDispatch()
   
 
@@ -57,6 +60,23 @@ const CreatePost = () => {
         }
       }
 
+      const handleGenerate = async () => {
+        setLoadingImg(true)
+        try{
+            
+            const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/posts/generate` , {
+                description : description
+            })
+            console.log(response.data.result)
+            setImg(response.data.result);
+            console.log('res ' , img)
+        }
+        catch(e){
+            console.log(e)
+        }finally{
+            setLoadingImg(false)
+        }
+      }
       useEffect(() => {
         // This effect will run after loading state is updated
         setImg('');
@@ -70,6 +90,12 @@ const CreatePost = () => {
                 <Avatar src={myProfile?.avatar?.url}/>
 
                 <input value={caption} type="text" name="" id=""  placeholder='What is happening!?' onChange={e => setCaption(e.target.value)}  />
+                <div className='generate'>
+                    <input value={description} type="text" name="" id=""  placeholder='Write thoughts to generate image' onChange={e => setDescription(e.target.value)}  />
+                    <button onClick={()=> handleGenerate()} disabled={loadingImg} >
+                        {loadingImg ? <div class="loader"></div> : 'Generate'}
+                    </button>
+                </div>
             </div>
 
 
